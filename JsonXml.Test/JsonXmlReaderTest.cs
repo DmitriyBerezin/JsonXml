@@ -29,7 +29,7 @@ namespace JsonXml.Test
         [TestMethod]
         public void EscapeAttributeReadingTest()
         {
-            TestJsonXmlReader("{\"foo\":{\"@bar\":\"\\\\\\\\<>&\\\"'/\"}}", "<foo bar=\"\\\\&lt;&gt;&amp;&quot;'/\"></foo>");
+            TestJsonXmlReader("{\"foo\":{\"@bar\":\"\\\\\\\\\\\\n\\\\r<>&\\\"'/\"}}", "<foo bar=\"\\\\\\n\\r&lt;&gt;&amp;&quot;'/\"></foo>");
         }
 
 		[TestMethod]

@@ -87,7 +87,9 @@ namespace JsonXml
 
         public static string Escape(string s)
         {
-            return s.Replace("\\", "\\\\");
+            return s.Replace("\r", "\\r")
+                    .Replace("\n", "\\n")
+                    .Replace("\\", "\\\\");
         }
 	}
 }

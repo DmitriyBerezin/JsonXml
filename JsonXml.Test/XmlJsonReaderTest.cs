@@ -22,7 +22,7 @@ namespace JsonXml.Test
         [TestMethod]
         public void EscapedAttributedEmptyElementTest()
         {
-            TestXmlJsonReader("<foo bar=\"\\\\&lt;&gt;&amp;&quot;'/\"></foo>", "{\"foo\":{\"@bar\":\"\\\\\\\\<>&\\\"'/\"}}");
+            TestXmlJsonReader("<foo bar=\"\\\\\n\r&lt;&gt;&amp;&quot;'/\"></foo>", "{\"foo\":{\"@bar\":\"\\\\\\\\\\\\n\\\\r<>&\\\"'/\"}}");
         }
 
 		[TestMethod]
